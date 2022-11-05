@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+// Global SCSS imports
+@import 'config/_vars';
+@import 'config/_reset';
+@import 'config/_global';
+
+// Подключение sass функций и миксинов
+@import 'config/functions';
+@import 'config/mixins';
+
+// Section SCSS files imports
+@import 'layout/header';
+@import 'layout/hero';
+// @import 'layout/footer';
+
+// Подключение шрифтов из папки "./src/fonts"
+@import 'config/fonts';
+
+// Подлючение кастомного скрола для всего сайта =======================================================================================================================
+@import 'config/scrollbar';
