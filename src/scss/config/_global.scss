@@ -66,6 +66,7 @@ body {
 	line-height: 27px;
 	color: white;
 	transition: background 0.3s;
+	display: inline-block;
 	@media (max-width: $breakpoint1200) {
 		padding: 10px 30px;
 		font-size: 16px;
@@ -83,6 +84,37 @@ body {
 	}
 }
 
+.section__title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 46px;
+	line-height: 110%;
+	letter-spacing: -0.03em;
+	color: $primary;
+	@media (max-width: $breakpoint1200) {
+		font-size: 36px;
+	}
+	@media (max-width: $breakpoint992) {
+		font-size: 28px;
+	}
+	span {
+		color: $secondary;
+	}
+}
+
+.section__text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 180%;
+	color: $primaryLight;
+	margin-top: 24px;
+	@media (max-width: $breakpoint992) {
+		margin-top: 12px;
+		font-style: 16px;
+		line-height: 130%;
+	}
+}
 // Animation
 // Fade
 @keyframes fade {

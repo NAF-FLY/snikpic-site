@@ -1,0 +1,144 @@
+.section {
+	// .section__price
+
+	&__price {
+		margin-top: 40px;
+	}
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	@media (max-width: $breakpoint768) {
+		flex-wrap: wrap;
+	}
+	// .price__item
+
+	&__item {
+		flex: 0 1 50%;
+		@media (max-width: $breakpoint1200) {
+			flex: 0 1 100%;
+		}
+
+		&.right__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url('../../images/price__bg.svg') center / cover no-repeat;
+			height: 100%;
+			padding: 390px 0 390px 0;
+			@media (max-width: $breakpoint1200) {
+				padding: 250px 0;
+			}
+			@media (max-width: $breakpoint768) {
+				background: url('../../images/price__bg-mob.svg') center / cover
+					no-repeat;
+				padding: 50px 0;
+				margin-top: 30px;
+			}
+		}
+	}
+
+	// .price__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		margin-top: 40px;
+		@media (max-width: $breakpoint992) {
+			margin-top: 20px;
+			gap: 12;
+		}
+	}
+
+	// .price__list-item
+
+	&__list-item {
+		padding: 8px 20px;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 180%;
+		border-radius: 24px;
+		@media (max-width: $breakpoint992) {
+			font-size: 14px;
+		}
+		@media (max-width: $breakpoint768) {
+			font-size: 12px;
+			padding: 4px 12px;
+		}
+	}
+
+	// .price__btn
+
+	&__btn {
+		margin-top: 40px;
+		@media (max-width: $breakpoint992) {
+			margin-top: 20px;
+		}
+	}
+}
+.list {
+	// .list__item-1
+
+	&__item-1 {
+		color: #ff8b7a;
+		background: #fff1ef;
+		border: 1px solid #ffd1ca;
+	}
+
+	// .list__item-2
+
+	&__item-2 {
+		color: #ffac2f;
+		background: #fff8ee;
+		border: 1px solid #ffca7a;
+	}
+
+	// .list__item-3
+
+	&__item-3 {
+		color: #3acd77;
+		background: #ecfff4;
+		border: 1px solid #98fac0;
+	}
+
+	// .list__item-4
+
+	&__item-4 {
+		color: #2bc0ca;
+		background: #f1feff;
+		border: 1px solid #6ee1e9;
+	}
+
+	// .list__item-5
+
+	&__item-5 {
+		color: #c140fd;
+		background: #fcf5ff;
+		border: 1px solid #ebbdff;
+	}
+}
+
+.coast {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 120px;
+	line-height: 80%;
+	letter-spacing: -0.03em;
+	color: $primary;
+	@media (max-width: $breakpoint992) {
+		font-size: 80px;
+	}
+	@media (max-width: $breakpoint768) {
+		font-size: 64px;
+	}
+}
+.period {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 180%;
+	color: $primary;
+}

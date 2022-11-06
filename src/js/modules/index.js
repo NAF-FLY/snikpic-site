@@ -1,3 +1,6 @@
+// import Swiper JS
+import Swiper from 'swiper'
+
 // FLS (Full Logging System) =================================================================================================================
 export function FLS(message) {
 	setTimeout(() => {
@@ -187,6 +190,61 @@ export function selectInit() {
 		onSelect(item) {
 			const input = document.querySelector('.hidden__input')
 			input.value = item.value
+		},
+	})
+}
+
+// Tabs
+export function tabs(
+	headerSelector,
+	tabSelector,
+	contentSelector,
+	activeClass,
+	display = 'flex'
+) {
+	const header = document.querySelector(headerSelector),
+		tab = document.querySelectorAll(tabSelector),
+		content = document.querySelectorAll(contentSelector)
+	function hideTabContent() {
+		content.forEach(item => (item.style.display = 'none'))
+		tab.forEach(item => item.classList.remove(activeClass))
+	}
+	function showTabContent(i = 0) {
+		content[i].style.display = display
+		tab[i].classList.add(activeClass)
+	}
+	hideTabContent()
+	showTabContent()
+	header.addEventListener('click', e => {
+		const target = e.target
+		if (
+			target.classList.contains(tabSelector.replace(/\./, '')) ||
+			target.parentNode.classList.contains(tabSelector.replace(/\./, ''))
+		) {
+			tab.forEach((item, i) => {
+				if (target === item || target.parentNode === item) {
+					hideTabContent()
+					showTabContent(i)
+				}
+			})
+		}
+	})
+}
+
+// Первый аргумент - класс всего нашего хедера табов
+// Второй аргумент - класс конкретного элемента
+// Третий аргумент - класс того блока, который будет переключаться
+// Четвертый аргумент - класс активности
+
+// Slider
+export function swiper() {
+	new Swiper('.swiper', {
+		loop: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.next__btn',
+			prevEl: '.prev__btn',
 		},
 	})
 }

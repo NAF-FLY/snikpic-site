@@ -1,0 +1,144 @@
+.section__tabs {
+	background-color: #fdf9f8;
+	padding-top: 100px;
+	padding-bottom: 140px;
+	margin-top: 140px;
+	@media (max-width: $breakpoint992) {
+		padding: 50px 0;
+		margin-top: 50px;
+	}
+}
+.tabs {
+	width: 100%;
+
+	&__header {
+		display: flex;
+		gap: 48px;
+		align-items: center;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		&-item {
+			cursor: pointer;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 180%;
+			color: $primary;
+			position: relative;
+			@media (max-width: $breakpoint992) {
+				font-size: 18px;
+			}
+			&.active {
+				&:after {
+					position: absolute;
+					content: '';
+					height: 3px;
+					width: 100%;
+					background: $secondary;
+					left: 0;
+					bottom: -8px;
+				}
+			}
+		}
+	}
+
+	&__content {
+		&-item {
+			animation: fade 0.5s linear;
+		}
+	}
+}
+
+.tab {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 74px;
+	@media (max-width: $breakpoint992) {
+		margin-top: 34px;
+	}
+	@media (max-width: $breakpoint768) {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	// .tab__item
+	&__item {
+		flex: 0 1 48%;
+		@media (max-width: $breakpoint768) {
+			flex: 0 1 100%;
+		}
+		&.left__item {
+			flex: 0 1 380px;
+		}
+
+		@media (max-width: $breakpoint1200) {
+			.tab__img {
+				max-width: 550px;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	// .tab__title
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	// .tab__subtitle
+
+	&__subtitle {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 180%;
+		letter-spacing: 0.2em;
+		color: $primaryLight;
+		margin-top: 32px;
+		@media (max-width: 768px) {
+			margin-top: 24px;
+		}
+	}
+
+	// .tab__tags
+
+	&__tags {
+		display: flex;
+		gap: 16px;
+		margin-top: 8px;
+		@media (max-width: 768px) {
+			gap: 8px;
+			flex-wrap: wrap;
+		}
+	}
+
+	// .tab__tag
+
+	&__tag {
+		padding-right: 16px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 180%;
+		color: $primary;
+		@media (max-width: 768px) {
+			padding-right: 8px;
+		}
+		&:not(&:last-child) {
+			border-right: 1px solid rgba(29, 39, 54, 0.1);
+		}
+	}
+
+	// .tab__btn
+
+	&__btn {
+		display: inline-block;
+		margin-top: 40px;
+	}
+}
